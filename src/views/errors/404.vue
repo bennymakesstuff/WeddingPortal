@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-<h1>External facing Home Page</h1>
+<h1>404 Page Not Found</h1>
   </div>
 </template>
 
