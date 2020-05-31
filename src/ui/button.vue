@@ -1,6 +1,6 @@
 <template>
 
-  <button v-bind:class="['thebutton', buttonContent.size, buttonContent.type, buttonContent.shadow]" v-bind:id="buttonContent.id">
+  <button v-bind:class="['thebutton', buttonContent.size, buttonContent.type, buttonContent.shadow]" v-bind:id="buttonContent.id" v-on:click="navigateTo()">
     {{ buttonContent.content }}
   </button>
 
@@ -17,10 +17,18 @@ export default {
                 id: 'defaultButton',
                 size: 'medium',
                 type: '',
-                shadow: ''}
+                shadow: '',
+                location: null}
     }
   },
   components: {
+  },
+  methods: {
+    navigateTo: function(){
+      if(this.buttonContent.location!=null){
+        this.$router.push({name: this.buttonContent.location});
+      }
+    }
   }
 };
 </script>

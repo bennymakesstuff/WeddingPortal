@@ -16,12 +16,13 @@ export default {
   },
   data: function(){
     return {
-      buttonContent: {content: "Some Content",
+      buttonContent: {content: "Login",
                 id: 'defaultButton',
                 size: 'medium',
                 type: '',
-                shadow: 'low'}
+                shadow: 'low',
+                location: 'user_dashboard'}
             }
-  }
+  },
 };
 </script>

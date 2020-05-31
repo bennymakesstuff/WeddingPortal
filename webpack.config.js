@@ -19,7 +19,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "public"),
-    /*publicPath: './dist/',*/
+    publicPath: 'http://localhost:9000/',
   },
 
 
@@ -63,7 +63,7 @@ module.exports = {
     port: 9000,
     hot: true,
     writeToDisk: true,
-    publicPath: 'http://localhost:9000/',
+    publicPath: '/public/',
     hotOnly: true,
     historyApiFallback: true,
   },

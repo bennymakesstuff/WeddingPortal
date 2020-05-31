@@ -1,6 +1,6 @@
 <template>
   <div class="application">
-<h1>User Dashboard</h1>
+    <h1>Dashboard</h1>
   </div>
 </template>
 
@@ -21,5 +21,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.application {font-size: 0.8rem;
+              height: auto;
+              text-align: left;
+              padding: 1rem;
+              color: #131517;
 
+  h1 {font-size: 1.5rem;}
+}
 </style>

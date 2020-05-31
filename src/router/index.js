@@ -45,6 +45,7 @@ const routes = [
       import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/User.vue"),
     children: [{
       path: 'account',
+      name: 'user_account',
       components: {
         default: () =>
           import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/account/Account.vue"),
@@ -52,6 +53,7 @@ const routes = [
     },
     {
       path: 'dashboard',
+      name: 'user_dashboard',
       components: {
         default: () =>
           import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/dashboard/Dashboard.vue"),
