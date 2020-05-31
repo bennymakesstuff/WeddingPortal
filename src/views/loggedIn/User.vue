@@ -54,7 +54,8 @@ $menu_width: 220px;
                   color: #131517;
                   font-size: 0.8;
                   position: relative;
-                  overflow-y: scroll;}
+                  overflow-y: scroll;
+                  overflow-x: hidden;}
 
 
 

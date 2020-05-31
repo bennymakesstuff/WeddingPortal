@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <b-button v-bind:buttonContent="buttonContent"></b-button>
-    <b-button v-bind:buttonContent="buttonContent"></b-button>
+    <ben-button v-bind:buttonContent="buttonContent"></ben-button>
+    <ben-button v-bind:buttonContent="buttonContent"></ben-button>
 <h1>External facing Home Page</h1>
   </div>
 </template>
@@ -12,7 +12,7 @@ import Button from '../../ui/button.vue';
 export default {
   name: "Home",
   components: {
-    'b-button':Button
+    'ben-button':Button
   },
   data: function(){
     return {
