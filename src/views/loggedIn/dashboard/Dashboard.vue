@@ -4,10 +4,20 @@
 
     <!--<system-alert color="#9c1a1a" title="System Announcement"/>-->
 
-    <widget size="narrow" color="#bd2ccf"/>
-    <widget size="standard" color="#cf932c"/>
-    <widget size="standard" color="#cf4e2c"/>
-    <widget size="wide" color="#2d8bcf"/>
+    <widget size="narrow" color="" title="BDU Page Visits">
+      <bdu-visits-today slot="widget-content"/>
+    </widget>
+
+    <widget size="narrow" color="" title="Directory Visits">
+      <directory-visits-today slot="widget-content"/>
+    </widget>
+
+    <widget size="narrow" color="" title="Bookings Today">
+      <bookings-today slot="widget-content"/>
+    </widget>
+
+    <widget size="standard" color="" title="New Bookings Today"/>
+    <widget size="standard" color="#cf932c" title="Today's Due Checkins"/>
     <widget size="narrow" color="#cf4e2c"/>
   </div>
 </template>
@@ -17,11 +27,19 @@
 import Widget from '../../../ui/widget.vue';
 import SysAlert from '../../../ui/system-alert.vue';
 
+//Widgets
+import BDUVisitsToday from './BDU_Visits_Today.vue';
+import DirectoryVisitsToday from './Directory_Visits_Today.vue';
+import BookingsToday from './New_Bookings_Today.vue';
+
 export default {
   name: 'dashboard',
   components: {
     'widget': Widget,
-    'system-alert':SysAlert
+    'system-alert':SysAlert,
+    'bdu-visits-today':BDUVisitsToday,
+    'directory-visits-today':DirectoryVisitsToday,
+    'bookings-today':BookingsToday
   },
   data: function(){
     return {

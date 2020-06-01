@@ -9,7 +9,9 @@
     </div>
 
     <div v-for="item in menu_items" class="menu-item" v-on:click="navigateTo(item.link)">
-      <div class="icon"></div>
+      <div class="icon">
+        <icon-base slot="pane-icon" width="30px" height="30px"><component v-bind:is="item.icon"/></icon-base>
+      </div>
       <div class="title">
         {{ item.title }}
       </div>
@@ -20,16 +22,37 @@
 
 
 <script>
+import IconBase from '../../../ui/icons/icon-base.vue';
+import IconDashboard from '../../../ui/icons/icon-dashboard.vue';
+import IconBookings from '../../../ui/icons/icon-calendar.vue';
+import IconMarketing from '../../../ui/icons/icon-marketing.vue';
+import IconPayments from '../../../ui/icons/icon-payments.vue';
+import IconClaims from '../../../ui/icons/icon-claims.vue';
+import IconSupport from '../../../ui/icons/icon-support.vue';
+import IconProperty from '../../../ui/icons/icon-property.vue';
+
 export default {
   name: 'main-navigation',
+  components: {
+    'icon-base':IconBase,
+    'icon-dashboard':IconDashboard,
+    'icon-claims':IconClaims,
+    'icon-support':IconSupport,
+    'icon-payments':IconPayments,
+    'icon-marketing':IconMarketing,
+    'icon-bookings':IconBookings,
+    'icon-property':IconProperty
+  },
   data: function(){
     return {
       user: {firstname: 'Chelsea', surname: 'Turner'},
       menu_items: [
-        {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: '', active: true},
-        {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: '', active: true},
-        {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: '', active: true},
-        {id: 4, position: 4, title: 'Marketing', link: 'user_marketing', icon: '', active: true},
+        {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
+        {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
+        {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
+        {id: 4, position: 4, title: 'My Claims', link: 'user_claims', icon: 'icon-claims', active: true},
+        {id: 5, position: 5, title: 'My Income', link: 'user_income', icon: 'icon-payments', active: true},
+        {id: 6, position: 6, title: 'Marketing', link: 'user_marketing', icon: 'icon-marketing', active: true},
       ]
     }
   },
@@ -53,7 +76,7 @@ export default {
                   margin: 0;
 
     .menu-item {width: calc(100%);
-                height: 40px;
+                height: 50px;
                 color: #eee;
                 font-size: 0;
                 cursor: pointer;
@@ -61,10 +84,10 @@ export default {
 
         .icon {width: 30px;
               height: 30px;
-              background-color: white;
-              opacity: 0.5;
+              background-color: transparent;
+              opacity: 1;
               border-radius: 0.15rem;
-              margin: 5px 10px;
+              margin: 10px 10px;
               display: inline-block;
               vertical-align: top;}
 
@@ -72,7 +95,7 @@ export default {
                 font-size: 0.8rem;
                 padding: 0px 10px;
                 padding-left: 0;
-                line-height: 42px;
+                line-height: 52px;
                 text-align: left;
                 color: #eee;
                 font-weight: 300;

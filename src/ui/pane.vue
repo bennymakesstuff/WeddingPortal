@@ -2,8 +2,13 @@
 
   <div :class="['pane-container', size]">
     <div :class="['pane-inner','low-shadow', size]">
-      <div class="pane-logo high-shadow" :style="iconStyle"/>
+      <div class="pane-logo high-shadow" :style="iconStyle">
+        <slot name="pane-icon"></slot>
+      </div>
       <div class="title">{{ title }}</div>
+      <div class="content">
+        <slot name="pane-content"></slot>
+      </div>
     </div>
   </div>
 
@@ -39,22 +44,24 @@ export default {
 </script>
 
 <style  lang="scss" scoped>
-.pane-container {width: 300px;
-                    height: auto;
+.pane-container {   height: auto;
+                    width: 100%;
                     display: inline-block;
                     vertical-align: top;
                     margin: 15px;
                     background-color: transparent;
+                    position: relative;
                     //outline: 1px solid rgb(139, 139, 139);
 
-      .pane-inner {width: 300px;
-                    min-height: 300px;
+      .pane-inner { min-height: 300px;
+                    height: auto;
+                    width: 100%;
                     margin-top: 20px;
                     border-radius: 0.3rem;
                     background-color: #ffffff;
                     position: relative;
 
-      .title {height: 70px;
+      .title {height: 40px;
               width: 70px;
               position: absolute;
               top: 10px;
@@ -70,9 +77,28 @@ export default {
                     top: -10px;
                     left: 10px;
                     color: #eeeeee;
-                    border-radius: 0.25rem;}
+                    border-radius: 0.25rem;
+                    line-height: 60px;
+                    padding-top: 5px;
+                    text-align: center;
 
+                    svg {margin-left: auto;
+                      margin-right: auto;}
                   }
+
+
+      .content {height: auto;
+              width: calc(100% - 20px);
+              position: relative;
+              padding-top: 60px;
+              margin-left: 10px;
+              color: #6a6a6a;
+              font-weight: 200;
+              font-size: 0.8rem;
+              padding-bottom: 10px;}
+
+            }
+
 }
 
 .narrow {width: 200px !important;}

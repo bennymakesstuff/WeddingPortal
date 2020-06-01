@@ -2,19 +2,35 @@
   <div class="application">
     <h1>My Account</h1>
     <p>Make changes to your account.</p>
-    <pane size="full" title="Personal Details" color="#787878"/>
-    <pane size="full" title="Security" color="#787878"/>
+    <pane size="full" title="Personal Details" color="#787878">
+      <icon-base slot="pane-icon" width="50px" height="50px"><user-icon/></icon-base>
+      <personal-details slot="pane-content" />
+    </pane>
+    <pane size="full" title="Security" color="#787878">
+      <icon-base slot="pane-icon" width="50px" height="50px"><shield-icon/></icon-base>
+      <personal-security slot="pane-content"/>
+    </pane>
   </div>
 </template>
 
 
 <script>
 import Pane from '../../../ui/pane.vue';
+import PersonalDetails from './Personal_Details.vue';
+import PersonalSecurity from './Personal_Security.vue';
+import IconBase from '../../../ui/icons/icon-base.vue';
+import IconShieldLock from '../../../ui/icons/icon-shield-lock.vue';
+import IconPersonFill from '../../../ui/icons/icon-person-fill.vue';
 
 export default {
   name: 'account',
   components: {
-    'pane':Pane
+    'pane':Pane,
+    'personal-details': PersonalDetails,
+    'personal-security': PersonalSecurity,
+    'icon-base': IconBase,
+    'shield-icon': IconShieldLock,
+    'user-icon': IconPersonFill
   },
   data: function(){
     return {
