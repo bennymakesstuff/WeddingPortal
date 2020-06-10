@@ -78,7 +78,12 @@ export default {
                         left: 10px;
                         color: #eeeeee;
                         border-radius: 0.25rem;
-                        background-color: #9794a2;}
+                        background-color: #9794a2;
+                        padding-top: 5px;
+                        padding-left: 5px;
+
+                      svg {}
+                      }
 
           .widget-title {position: relative;
                       padding-top: 10px;

@@ -8,6 +8,8 @@ import Error404 from "../views/errors/404.vue";
 
 Vue.use(VueRouter);
 
+
+
 const routes = [
   {
     path: "/",
@@ -31,6 +33,24 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "register" */ "../views/loggedOut/Register.vue")
+  },
+  {
+    path: "/admin",
+    name: "user",
+    meta: {
+      requiresAuth: true,
+      is_admin: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "admin" */ "../views/loggedIn/admin/Admin.vue"),
+    children: [{
+      path: 'dashboard',
+      name: 'admin_dashboard',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/admin/admin_dashboard/Admin_Dashboard.vue"),
+      }
+    }]
   },
   {
     path: "/user",
@@ -69,6 +89,7 @@ const router = new VueRouter({
   routes
 });
 
+
 //Add extra parts to make it if the user is logged in to not go to login or register
 router.beforeEach((to, from, next) => {
     if(to.matched.some(record => record.meta.requiresAuth)) {
@@ -78,14 +99,31 @@ router.beforeEach((to, from, next) => {
                 params: { nextUrl: to.fullPath }
             })
         } else {
-            next()
+            if(localStorage.hasOwnProperty('user')){
+              var user = JSON.parse(localStorage.getItem('user'));
+              console.log('User Found');
+            }
+            else{
+
+            }
+            if(to.matched.some(record => record.meta.is_admin)) {
+              if(user.is_admin == true){
+                next()
+              }
+              else{
+                next({name:'user_dashboard'})
+              }
+            }
+            else{
+              next()
+            }
         }
     } else if(to.matched.some(record => record.meta.guest)) {
         if(localStorage.getItem('token') == null){
             next()
         }
         else{
-            next({ name: 'dashboard'})
+            next({ name: 'user_dashboard'})
         }
     }else {
         next()

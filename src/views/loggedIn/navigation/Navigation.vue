@@ -30,6 +30,7 @@ import IconPayments from '../../../ui/icons/icon-payments.vue';
 import IconClaims from '../../../ui/icons/icon-claims.vue';
 import IconSupport from '../../../ui/icons/icon-support.vue';
 import IconProperty from '../../../ui/icons/icon-property.vue';
+import IconPersonFill from '../../../ui/icons/icon-person-fill.vue';
 
 export default {
   name: 'main-navigation',
@@ -41,7 +42,8 @@ export default {
     'icon-payments':IconPayments,
     'icon-marketing':IconMarketing,
     'icon-bookings':IconBookings,
-    'icon-property':IconProperty
+    'icon-property':IconProperty,
+    'icon-person-fill':IconPersonFill
   },
   data: function(){
     return {
@@ -50,9 +52,10 @@ export default {
         {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
         {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
         {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
-        {id: 4, position: 4, title: 'My Claims', link: 'user_claims', icon: 'icon-claims', active: true},
-        {id: 5, position: 5, title: 'My Income', link: 'user_income', icon: 'icon-payments', active: true},
-        {id: 6, position: 6, title: 'Marketing', link: 'user_marketing', icon: 'icon-marketing', active: true},
+        {id: 4, position: 4, title: 'My Bank', link: 'user_bank', icon: 'icon-payments', active: true},
+        {id: 6, position: 6, title: 'My Team', link: 'user_teams', icon: 'icon-support', active: true},
+        {id: 6, position: 6, title: 'Support / FAQ', link: 'user_support', icon: 'icon-support', active: true},
+        {id: 6, position: 6, title: 'Ideas / Feedback', link: 'user_ideas', icon: 'icon-support', active: true},
       ]
     }
   },
