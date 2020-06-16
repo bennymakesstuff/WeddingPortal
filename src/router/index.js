@@ -36,7 +36,7 @@ const routes = [
   },
   {
     path: "/admin",
-    name: "user",
+    name: "admin",
     meta: {
       requiresAuth: true,
       is_admin: true

@@ -40,7 +40,8 @@ $menu_width: 220px;
                   display: inline-block;
                   width: $menu_width;
                   vertical-align: top;
-                  background-color: #131517;
+                  //background-color: #131517;
+                  background-color: #2c363f;
                   color: #ffffff;
                   font-size: 0.8;
                   position: relative;}

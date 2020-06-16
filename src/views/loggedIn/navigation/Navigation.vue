@@ -34,6 +34,9 @@ import IconClaims from '../../../ui/icons/icon-claims.vue';
 import IconSupport from '../../../ui/icons/icon-support.vue';
 import IconProperty from '../../../ui/icons/icon-property.vue';
 import IconPersonFill from '../../../ui/icons/icon-person-fill.vue';
+import IconTeam from '../../../ui/icons/icon-team.vue';
+import IconBank from '../../../ui/icons/icon-bank.vue';
+import IconIdea from '../../../ui/icons/icon-idea.vue';
 
 export default {
   name: 'main-navigation',
@@ -47,7 +50,10 @@ export default {
     'icon-marketing':IconMarketing,
     'icon-bookings':IconBookings,
     'icon-property':IconProperty,
-    'icon-person-fill':IconPersonFill
+    'icon-person-fill':IconPersonFill,
+    'icon-team':IconTeam,
+    'icon-bank':IconBank,
+    'icon-idea':IconIdea,
   },
   data: function(){
     return {
@@ -56,10 +62,10 @@ export default {
         {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
         {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
         {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
-        {id: 4, position: 4, title: 'My Bank', link: 'user_banking', icon: 'icon-payments', active: true},
-        {id: 6, position: 6, title: 'My Team', link: 'user_team', icon: 'icon-support', active: true},
+        {id: 4, position: 4, title: 'My Bank', link: 'user_banking', icon: 'icon-bank', active: true},
+        {id: 6, position: 6, title: 'My Team', link: 'user_team', icon: 'icon-team', active: true},
         {id: 6, position: 6, title: 'Support / FAQ', link: 'user_support', icon: 'icon-support', active: true},
-        {id: 6, position: 6, title: 'Ideas / Feedback', link: 'user_ideas', icon: 'icon-support', active: true},
+        {id: 6, position: 6, title: 'Ideas / Feedback', link: 'user_ideas', icon: 'icon-idea', active: true},
       ]
     }
   },
@@ -87,7 +93,8 @@ export default {
                 color: #eee;
                 font-size: 0;
                 cursor: pointer;
-                border-bottom: 1px solid #1a1818;
+                //border-bottom: 1px solid #1a1818;
+                border-bottom: 1px solid #273038;
 
         .icon {width: 30px;
               height: 30px;
@@ -122,8 +129,10 @@ export default {
             font-size: 0;
             line-height: 80px;
             cursor: pointer;
-            border-bottom: 1px solid #393737;
-            border-top: 1px solid #393737;
+          //border-bottom: 1px solid #393737;
+            //border-top: 1px solid #393737;
+            border-bottom: 1px solid #273038;
+            border-top: 1px solid #273038;
             margin-bottom: 10px;
 
     .image {width: 60px;
