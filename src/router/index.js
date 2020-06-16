@@ -78,6 +78,50 @@ const routes = [
         default: () =>
           import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/dashboard/Dashboard.vue"),
       }
+    },
+    {
+      path: 'banking',
+      name: 'user_banking',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/banking/Banking.vue"),
+      }
+    },
+    {
+      path: 'bookings',
+      name: 'user_bookings',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/bookings/Bookings.vue"),
+      }
+    },{
+      path: 'ideas',
+      name: 'user_ideas',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/ideas/Ideas.vue"),
+      }
+    },{
+      path: 'properties',
+      name: 'user_properties',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/properties/Properties.vue"),
+      }
+    },{
+      path: 'support',
+      name: 'user_support',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/support/Support.vue"),
+      }
+    },{
+      path: 'team',
+      name: 'user_team',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/team/Team.vue"),
+      }
     }]
   },
   { path: "*", component: Error404 }

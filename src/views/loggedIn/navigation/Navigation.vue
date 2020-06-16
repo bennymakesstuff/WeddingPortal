@@ -1,7 +1,9 @@
 <template>
   <div class="main-navigation">
 
-    <div class="app-logo">BELLHOP</div>
+    <div class="app-logo">
+      <icon-base slot="pane-icon" width="180px" height="50px" viewBox="0 0 180 50"><icon-bellhop/></icon-base>
+    </div>
 
     <div class="user-card" v-on:click="navigateTo('user_account')">
       <div class="image"></div>
@@ -23,6 +25,7 @@
 
 <script>
 import IconBase from '../../../ui/icons/icon-base.vue';
+import IconBellhop from '../../../ui/icons/icon-bellhop.vue';
 import IconDashboard from '../../../ui/icons/icon-dashboard.vue';
 import IconBookings from '../../../ui/icons/icon-calendar.vue';
 import IconMarketing from '../../../ui/icons/icon-marketing.vue';
@@ -36,6 +39,7 @@ export default {
   name: 'main-navigation',
   components: {
     'icon-base':IconBase,
+    'icon-bellhop':IconBellhop,
     'icon-dashboard':IconDashboard,
     'icon-claims':IconClaims,
     'icon-support':IconSupport,
@@ -52,8 +56,8 @@ export default {
         {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
         {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
         {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
-        {id: 4, position: 4, title: 'My Bank', link: 'user_bank', icon: 'icon-payments', active: true},
-        {id: 6, position: 6, title: 'My Team', link: 'user_teams', icon: 'icon-support', active: true},
+        {id: 4, position: 4, title: 'My Bank', link: 'user_banking', icon: 'icon-payments', active: true},
+        {id: 6, position: 6, title: 'My Team', link: 'user_team', icon: 'icon-support', active: true},
         {id: 6, position: 6, title: 'Support / FAQ', link: 'user_support', icon: 'icon-support', active: true},
         {id: 6, position: 6, title: 'Ideas / Feedback', link: 'user_ideas', icon: 'icon-support', active: true},
       ]
@@ -158,5 +162,6 @@ export default {
             line-height: 60px;
             font-weight: 600;
             color: #eee;
+            margin-top: 1rem;
           }
 </style>

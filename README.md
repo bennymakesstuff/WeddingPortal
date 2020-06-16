@@ -5,14 +5,14 @@
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Compiles and hot-reloads for development via webpack dev server
 ```
-npm run serve
+npm run wpdev
 ```
 
-### Compiles and minifies for production
+### Compiles and minifies for production via webpack
 ```
-npm run build
+npm run wpbuild
 ```
 
 ### Run your unit tests
@@ -24,6 +24,3 @@ npm run test:unit
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
