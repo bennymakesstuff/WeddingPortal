@@ -92,7 +92,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "6909e8875ac526e9a986";
+/******/ 	var hotCurrentHash = "de9ef08ba234507003f1";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -2103,7 +2103,7 @@ eval("var Vue // late bind\nvar version\nvar map = Object.create(null)\nif (type
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  name: \"Button\",\r\n  props: {\r\n    buttonContent: {\r\n      type: Object,\r\n      default: {content: \"Some Content\",\r\n                id: 'defaultButton',\r\n                size: 'medium',\r\n                type: '',\r\n                shadow: '',\r\n                location: null}\r\n    }\r\n  },\r\n  components: {\r\n  },\r\n  methods: {\r\n    navigateTo: function(){\r\n      if(this.buttonContent.location!=null){\r\n        this.$router.push({name: this.buttonContent.location});\r\n      }\r\n    }\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/ui/button.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Button\",\n  props: {\n    buttonContent: {\n      type: Object,\n      default: {content: \"Some Content\",\n                id: 'defaultButton',\n                size: 'medium',\n                type: '',\n                shadow: '',\n                location: null}\n    }\n  },\n  components: {\n  },\n  methods: {\n    navigateTo: function(){\n      if(this.buttonContent.location!=null){\n        this.$router.push({name: this.buttonContent.location});\n      }\n    }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/ui/button.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -2115,7 +2115,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  props: {\r\n    iconName: {\r\n        type: String,\r\n        default: 'box'\r\n      },\r\n    width: {\r\n      type: [Number, String],\r\n      default: 32\r\n    },\r\n    height: {\r\n      type: [Number, String],\r\n      default: 32\r\n    },\r\n    iconColor: {\r\n      type: String,\r\n      default: 'currentColor'\r\n    }\r\n  },\r\n  data: function(){\r\n    return {}\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/ui/icons/icon-base.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    iconName: {\n        type: String,\n        default: 'box'\n      },\n    width: {\n      type: [Number, String],\n      default: 32\n    },\n    height: {\n      type: [Number, String],\n      default: 32\n    },\n    iconColor: {\n      type: String,\n      default: 'currentColor'\n    }\n  },\n  data: function(){\n    return {}\n  }\n});\n\n\n//# sourceURL=webpack:///./src/ui/icons/icon-base.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -2127,7 +2127,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  name: \"Widget\",\r\n  props: {\r\n    title: {\r\n      type: String,\r\n      default: ''\r\n    },\r\n    color: {\r\n      type: String,\r\n      default: '#9794a2'\r\n    }\r\n  },\r\n  computed: {\r\n    iconStyle: function(){\r\n      var color = 'background-color:' + this.color + ' !important;';\r\n      return color;\r\n    }\r\n  },\r\n  components: {},\r\n  methods: {\r\n    showToolTip: function(event){\r\n      alert('show');\r\n    }\r\n  }\r\n});\r\n\n\n//# sourceURL=webpack:///./src/ui/quicklink.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Widget\",\n  props: {\n    title: {\n      type: String,\n      default: ''\n    },\n    color: {\n      type: String,\n      default: '#9794a2'\n    }\n  },\n  computed: {\n    iconStyle: function(){\n      var color = 'background-color:' + this.color + ' !important;';\n      return color;\n    }\n  },\n  components: {},\n  methods: {\n    showToolTip: function(event){\n      alert('show');\n    }\n  }\n});\n\n\n//# sourceURL=webpack:///./src/ui/quicklink.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -2139,7 +2139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  name: \"Sysalert\",\r\n  props: {\r\n    title: {\r\n      type: String,\r\n      default: 'No Title Provided'\r\n    },\r\n    content: {\r\n      type: String,\r\n      default: ''\r\n    },\r\n    color: {\r\n      type: String,\r\n      default: '#606060'\r\n    }\r\n  },\r\n  computed: {\r\n    iconStyle: function(){\r\n      var color = 'background-color:' + this.color + ';';\r\n      return color;\r\n    }\r\n  },\r\n  components: {},\r\n  methods: {}\r\n});\r\n\n\n//# sourceURL=webpack:///./src/ui/system-alert.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Sysalert\",\n  props: {\n    title: {\n      type: String,\n      default: 'No Title Provided'\n    },\n    content: {\n      type: String,\n      default: ''\n    },\n    color: {\n      type: String,\n      default: '#606060'\n    }\n  },\n  computed: {\n    iconStyle: function(){\n      var color = 'background-color:' + this.color + ';';\n      return color;\n    }\n  },\n  components: {},\n  methods: {}\n});\n\n\n//# sourceURL=webpack:///./src/ui/system-alert.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -2151,7 +2151,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\r\n\r\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\r\n  name: \"Widget\",\r\n  props: {\r\n    size: {\r\n      type: String,\r\n      default: 'standard'\r\n    },\r\n    title: {\r\n      type: String,\r\n      default: ''\r\n    },\r\n    color: {\r\n      type: String,\r\n      default: '#9794a2'\r\n    }\r\n  },\r\n  computed: {\r\n    iconStyle: function(){\r\n      var color = 'background-color:' + this.color + ' !important;';\r\n      return color;\r\n    }\r\n  },\r\n  components: {},\r\n  methods: {}\r\n});\r\n\n\n//# sourceURL=webpack:///./src/ui/widget.vue?./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n//\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  name: \"Widget\",\n  props: {\n    size: {\n      type: String,\n      default: 'standard'\n    },\n    title: {\n      type: String,\n      default: ''\n    },\n    color: {\n      type: String,\n      default: '#9794a2'\n    }\n  },\n  computed: {\n    iconStyle: function(){\n      var color = 'background-color:' + this.color + ' !important;';\n      return color;\n    }\n  },\n  components: {},\n  methods: {}\n});\n\n\n//# sourceURL=webpack:///./src/ui/widget.vue?./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -2843,7 +2843,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue */ \"./src/App.vue\");\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./router */ \"./src/router/index.js\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ \"./src/store/index.js\");\n/* harmony import */ var buefy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! buefy */ \"./node_modules/buefy/dist/esm/index.js\");\n/* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! buefy/dist/buefy.css */ \"./node_modules/buefy/dist/buefy.css\");\n/* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\nvar user = {\r\n  givenname: 'Benjamin',\r\n  surname: 'Broad',\r\n  is_admin: true\r\n};\r\n\r\nlocalStorage.setItem('user',JSON.stringify(user));\r\n\r\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(buefy__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\r\n\r\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].config.productionTip = false;\r\n\r\nnew vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\r\n  router: _router__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\r\n  store: _store__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\r\n  render: h => h(_App_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\r\n}).$mount(\"#app\");\r\n\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ \"./node_modules/vue/dist/vue.runtime.esm.js\");\n/* harmony import */ var _App_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue */ \"./src/App.vue\");\n/* harmony import */ var _router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./router */ \"./src/router/index.js\");\n/* harmony import */ var _store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store */ \"./src/store/index.js\");\n/* harmony import */ var buefy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! buefy */ \"./node_modules/buefy/dist/esm/index.js\");\n/* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! buefy/dist/buefy.css */ \"./node_modules/buefy/dist/buefy.css\");\n/* harmony import */ var buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(buefy_dist_buefy_css__WEBPACK_IMPORTED_MODULE_5__);\n\n\n\n\n\n\n\nvar user = {\n  givenname: 'Benjamin',\n  surname: 'Broad',\n  is_admin: true\n};\n\nlocalStorage.setItem('user',JSON.stringify(user));\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].use(buefy__WEBPACK_IMPORTED_MODULE_4__[\"default\"]);\n\nvue__WEBPACK_IMPORTED_MODULE_0__[\"default\"].config.productionTip = false;\n\nnew vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]({\n  router: _router__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n  store: _store__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n  render: h => h(_App_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"])\n}).$mount(\"#app\");\n\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ }),
 
@@ -3442,7 +3442,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\xampp\\htdocs\\bellhop\\portal\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:9000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:9000\");\n__webpack_require__(/*! C:\\xampp\\htdocs\\bellhop\\portal\\node_modules\\webpack\\hot\\only-dev-server.js */\"./node_modules/webpack/hot/only-dev-server.js\");\nmodule.exports = __webpack_require__(/*! ./src/main.js */\"./src/main.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(/*! /home/benjamin/bellhop/portal/node_modules/webpack-dev-server/client/index.js?http://localhost:9000 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:9000\");\n__webpack_require__(/*! /home/benjamin/bellhop/portal/node_modules/webpack/hot/only-dev-server.js */\"./node_modules/webpack/hot/only-dev-server.js\");\nmodule.exports = __webpack_require__(/*! ./src/main.js */\"./src/main.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ })
 

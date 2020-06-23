@@ -1,4 +1,17 @@
-# portal
+# BellHop | Portal Site.
+### The "Portal Site" is used by the accomodation providers to manage their accounts.
+
+## Core Features
+- Manage and Modify Listing on Directory Site
+- View and Manage incoming Bookings
+- View and Manage Staff / Team
+- View and Manage Financial Account / Funds
+- Create and View Support Tickets
+- View FAQ
+- Update Room/inventory information
+- Manage social integrations / marketing / in-room marketing
+- Contact / Message Guests
+
 
 ## Project setup
 ```
