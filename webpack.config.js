@@ -19,7 +19,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "public"),
-    publicPath: 'http://localhost:9000/',
+    publicPath: 'http://192.168.1.8:9000/',
   },
 
 
@@ -61,6 +61,7 @@ module.exports = {
     contentBase: path.join(__dirname, 'public'),
     compress: true,
     port: 9000,
+    host: '0.0.0.0',
     hot: true,
     writeToDisk: true,
     publicPath: '/public/',

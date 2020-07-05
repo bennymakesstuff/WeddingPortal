@@ -12,6 +12,7 @@ var user = {
 };
 
 localStorage.setItem('user',JSON.stringify(user));
+localStorage.setItem('token',JSON.stringify("aiwfb"));
 
 Vue.use(Buefy);
 

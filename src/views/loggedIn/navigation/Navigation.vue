@@ -61,6 +61,7 @@ export default {
       menu_items: [
         {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
         {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
+        {id: 2, position: 2, title: 'Scans', link: 'user_scans', icon: 'icon-property', active: true},
         {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
         {id: 4, position: 4, title: 'My Bank', link: 'user_banking', icon: 'icon-bank', active: true},
         {id: 6, position: 6, title: 'My Team', link: 'user_team', icon: 'icon-team', active: true},

@@ -80,6 +80,14 @@ const routes = [
       }
     },
     {
+      path: 'Scans',
+      name: 'user_scans',
+      components: {
+        default: () =>
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/scans/Scans.vue"),
+      }
+    },
+    {
       path: 'banking',
       name: 'user_banking',
       components: {
