@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const application_settings = {
-  title: "BellHop",
+  title: "HomeSales",
   filename: "index.html",
   template: "./src/index.html"
 };

@@ -1,16 +1,19 @@
-# BellHop | Portal Site.
-### The "Portal Site" is used by the accomodation providers to manage their accounts.
+# HomeSales (PlaceHolder Name)
+### Home Sales is a portal where home owners can go to list and sell their own home online.
 
 ## Core Features
-- Manage and Modify Listing on Directory Site
-- View and Manage incoming Bookings
-- View and Manage Staff / Team
-- View and Manage Financial Account / Funds
-- Create and View Support Tickets
-- View FAQ
-- Update Room/inventory information
-- Manage social integrations / marketing / in-room marketing
-- Contact / Message Guests
+- List a Property online
+- Recieve enquiries for the home to email
+- Show and Search Properties
+- Rank Agents
+
+## Future Features
+- Social Marketing from the Portal
+- Solicitor / Conveyancer Marketplace
+- Form1 Integration
+- Contract Integration
+- Agent Profiles
+- Companion App for Open Homes
 
 
 ## Project setup
