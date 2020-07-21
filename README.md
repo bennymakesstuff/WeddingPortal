@@ -1,19 +1,22 @@
-# HomeSales (PlaceHolder Name)
-### Home Sales is a portal where home owners can go to list and sell their own home online.
+# EdiBundle
+### Edibundle is a Market to Home food supply business.
+### It sources food ordered in premade or custom made packs from local market suppliers
+### then packages and delivers it to the customers.
 
 ## Core Features
-- List a Property online
-- Recieve enquiries for the home to email
-- Show and Search Properties
-- Rank Agents
+- Customers can order online
+- Customers can pay online
+- Customers can save regular orders for future reorder
+- Customers can choose from premade boxes
+- Customers can submit photos for issues
+- App creates stickers for customer boxes
+- App creates picking slips for orders
+- App creates travel route for customers and sends customers a message with delivery window
+- App send customers message with delivery and order confirmations as well as order window closing times
 
 ## Future Features
-- Social Marketing from the Portal
-- Solicitor / Conveyancer Marketplace
-- Form1 Integration
-- Contract Integration
-- Agent Profiles
-- Companion App for Open Homes
+- Other suppliers
+- Reporting on suppliers
 
 
 ## Project setup
