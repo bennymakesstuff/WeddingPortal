@@ -3,15 +3,12 @@
     <div class="hero">
       <div class="hero_inner">
         <div class="title_area">
-          <div class="left">
-            <!-- SA LOGO HERE -->
-          </div>
-          <div class="right">
-            <h1>Jack's Page</h1>
-          </div>
+            <iframe id="ytplayer" class="ytframe" type="text/html" width="auto" height="100vh"
+  src="https://www.youtube.com/embed/647ikNd3jSI?autoplay=1&origin=http://example.com"
+  frameborder="0"></iframe>
         </div>
         <div class="signup_area">
-          
+
         </div>
       </div>
     </div>
@@ -33,11 +30,10 @@ export default {
 @import '../../ui/styles/breakpoints.scss';
 @import '../../ui/styles/globals.scss';
 
-.hero {min-height: 20rem;
+.hero {height: 100vh;
       width: 100%;
-      background-color: #ffffff;
+      background-color: transparent;
       border-bottom: 1px solid #e0e0e0;
-      background: transparent;
       line-height: 1rem;
       min-height: 20rem;
       height: auto;
@@ -52,26 +48,22 @@ export default {
                     display: inline-block;
                     margin-left: auto;
                     margin-right: auto;
-                    padding-top: 4rem;
+                    padding-top: 2rem;
+                    background-color: transparent;
 
                     @include respond-to('medium'){
                       width: 50rem;
                     }
 
-                    .title_area {width: 100%;
-                                height: auto;
+                    .title_area {width: 100vw;
+                                height: 100vh;
+
                                 font-size: 0;
                                 position: relative;
                                 background-color: transparent;
 
-                        .left {border: 0;
-                                width: 100%;
-                                min-height: 12rem;}
-
-                        .right {border: 0;
-                                width: 100%;
-                                text-align: center;
-                                background-color: transparent;
+                        .ytframe {width: 100%;
+                                  height: 100vh;}
 
                                 h1 {font-size: 5.8rem;
                                   line-height: 5.8rem;
@@ -81,7 +73,7 @@ export default {
                                     color: #536650;
                                     font-family: 'Covered By Your Grace', cursive;
                                     text-shadow: 0px 1px 5px $heroTextShadow;}
-                              }
+
                     }
                     .signup_area {
                       font-family: 'Quicksand', sans-serif;

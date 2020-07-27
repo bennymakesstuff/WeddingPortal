@@ -1,6 +1,15 @@
 <template>
   <div class="menu">
-    <div class="logo_area">November 2021</div>
+    <div :class="[mobileMenuBackground,'mobileMenuBackground']" @click="closeMenu()"></div>
+    <div :class="[mobileMenuClass,'mobile-menu']">
+      <div class="mobile-menu-title wedding_icon_text"></div>
+      <router-link :to="{ name: 'home'}" class="mobile-menu-item" @click.native="closeMenu()">Home</router-link>
+      <router-link :to="{ name: 'details'}" class="mobile-menu-item" @click.native="closeMenu()">Details</router-link>
+      <router-link :to="{ name: 'accomodation'}" v-if="!userLoggedIn" class="mobile-menu-item" @click.native="closeMenu()">Accomodation</router-link>
+      <router-link v-if="userLoggedIn" @click="logout" class="mobile-menu-item" @click.native="closeMenu()">Logout</router-link>
+    </div>
+    <div v-if="showBenChelsIcon == true" class="logo_area wedding_icon"></div>
+    <div  v-if="showBenChelsIcon == false" class="logo_area">November 2021</div>
     <div class="button_area">
       <div class="large_menu">
         <router-link v-if="!userLoggedIn" :to="{ name: 'home'}" class="menu_item">Home</router-link>
@@ -8,7 +17,7 @@
         <router-link :to="{ name: 'accomodation'}" v-if="!userLoggedIn" class="menu_item">Accomodation</router-link>
         <div v-if="userLoggedIn" @click="logout" class="menu_item">Logout</div>
       </div>
-      <button class="menu_trigger">
+      <button class="menu_trigger" @click="openMenu()">
         <div class="icon">
           <div class="menu_bar"/>
           <div class="menu_bar"/>
@@ -19,7 +28,7 @@
       <ben-button v-if="!userLoggedIn" v-bind:buttonContent="buttonContent">
         <icon-base slot="button-icon" height="0.8rem" width="0.8rem">
           <user-icon/>
-        </icon-base>
+        </icon-base>title
       </ben-button>
     </div>
   </div>
@@ -46,7 +55,19 @@ export default {
                 icon: true,
                 shadow: 'low',
                 location: 'login'},
-              }
+        mobileMenu: {status:false},
+        showBenChelsIcon: false,
+  }
+},
+watch: {
+    $route(to, from) {
+      if(to.name!='home'){
+        this.showBenChelsIcon=true;
+      }
+      else{
+        this.showBenChelsIcon=false;
+      }
+    }
   },
   computed: {
     userLoggedIn: function(){
@@ -55,6 +76,22 @@ export default {
       }
       else{
         return true;
+      }
+    },
+    mobileMenuClass: function(){
+      if(this.mobileMenu.status==true){
+        return 'mm-open';
+      }
+      else{
+        return 'mm-closed';
+      }
+    },
+    mobileMenuBackground: function(){
+      if(this.mobileMenu.status==true){
+        return 'mb-open';
+      }
+      else{
+        return 'mb-closed';
       }
     },
     userIsAdmin: function(){
@@ -69,7 +106,13 @@ export default {
   methods: {
     logout: function(){
       this.$store.dispatch('logout');
-    }
+    },
+    closeMenu: function(){
+      this.mobileMenu.status = false;
+    },
+    openMenu: function(){
+      this.mobileMenu.status = true;
+    },
   }
 };
 </script>
@@ -81,11 +124,70 @@ export default {
 .menu {height: $mainMenuHeight;
       width: 100%;
       background-color: $menuBackgroundColor;
+      background: #ffffff url('../../assets/paper3.jpg') repeat;
+      background-size: 30% 100%;
       color: #dddddd;
       position: fixed;
       z-index: 100;
       top: 0;
       //box-shadow: 0px 0px 5px #d0d0d0;
+
+.mb-open {display: block;}
+.mb-closed {display: none;}
+
+.mm-open {left: 0rem;}
+.mm-closed {left: -21rem;}
+
+.mobileMenuBackground {position: fixed;
+                      top: 0;
+                      left: 0;
+                      opacity: 0.3;
+                      height: 100vh;
+                      width: 100vw;
+                      background-color: #333333;
+
+
+
+                      @include respond-to('large'){
+                        display: none !important;
+                      }
+                    }
+
+.mobile-menu {position: fixed;
+              top: 0;
+              width: 20rem;
+              z-index: 101;
+              box-shadow: 0 0 10px #333333;
+              background-color: #e6e3d6;
+              height: 100vh;
+              transition: left 200ms ease;
+
+              @include respond-to('large'){
+                display: none !important;
+              }
+
+  .mobile-menu-title {padding: 1rem;
+                    border-bottom: 1px solid $edibundleGreen;
+                    color: $edibundleGreen;
+                    display: block;
+                    width: calc(100% - 0rem);
+                    height: 6rem;
+                    font-size: 1.2rem;
+                    line-height: 2rem;
+                    font-weight: 500;}
+
+              .mobile-menu-item {padding: 1rem;
+                                border-bottom: 1px solid $edibundleGreen;
+                                color: $edibundleGreen;
+                                display: block;
+                                width: calc(100% - 0rem);
+                                height: auto;
+                                font-size: 1.2rem;
+                                line-height: 2rem;
+                .icon {}
+                .text {}
+              }
+            }
 
       .button_area {width: auto;
                   position: absolute;
@@ -203,6 +305,19 @@ export default {
           }
 
                 }
+
+      .wedding_icon {width: 300px;
+                    height: 5rem;
+                    background: transparent url(../../assets/wedding_logo_small.png) no-repeat;
+                    background-size: contain;
+                    background-position: left;}
+
+    .wedding_icon_text {
+                  background: transparent url(../../assets/wedding_logo_text.png) no-repeat;
+                  background-size: 60%;
+                  background-position: center;
+
+                  }
 
     }
 

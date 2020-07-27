@@ -50,13 +50,16 @@ export default {
       .hero_inner {width: 100%;
                     border: transparent;
                     height: 100%;
+                    padding-left: 1rem;
+                    padding-right: 1rem;
                     display: inline-block;
                     margin-left: auto;
                     margin-right: auto;
-                    padding-top: 4rem;
+                    padding-top: 2rem;
 
                     @include respond-to('medium'){
                       width: 50rem;
+                      padding-top: 4rem;
                     }
 
                     .title_area {width: 100%;
@@ -67,33 +70,56 @@ export default {
 
                         .left {border: 0;
                                 width: 100%;
-                                min-height: 12rem;}
+                                min-height: 25rem;
+                                background: transparent url('../../assets/wedding_logo.png') no-repeat;
+                                background-size: contain;
+                                background-position: center;
+
+                          @include respond-to('small'){
+                            min-height: 30rem;
+                          }
+
+                          @include respond-to('medium'){
+                            min-height: 26rem;
+                          }
+                          @include respond-to('large'){
+                            min-height: 26rem;
+                          }
+                              }
 
                         .right {border: 0;
                                 width: 100%;
                                 text-align: center;
                                 background-color: transparent;
+                                display: none;
 
-                                h1 {font-size: 5.8rem;
-                                  line-height: 5.8rem;
+                                h1 {font-size: 3.8rem;
+                                  line-height: 3.8rem;
                                     font-weight: 400;
                                     margin: 0;
                                     padding: 0;
                                     color: #536650;
                                     font-family: 'Covered By Your Grace', cursive;
-                                    text-shadow: 0px 1px 5px $heroTextShadow;}
+                                    text-shadow: 0px 1px 5px $heroTextShadow;
+
+                                    @include respond-to('medium'){
+                                      font-size: 5.8rem;
+                                      line-height: 5.8rem;
+                                    }
+                                  }
                               }
                     }
                     .signup_area {
                       font-family: 'Quicksand', sans-serif;
                       border: 0;
                       min-height: 10rem;
-                      width: calc(100% - 4rem);
+                      width: calc(100% - 1rem);
                       padding: 2rem;
                       display: inline-block;
                       margin-left: auto;
                       margin-right: auto;
                       margin-top: 2rem;
+                      color: $edibundleGreen;
 
                       .start-account-area {border: 0;
                       min-height: 5rem;
@@ -191,9 +217,9 @@ export default {
                                     }
                     }
 
-                      h2 {color: #ffffff;
-                          font-size: 1.5rem;
-                          margin-top: 0rem;
+                      h2 {color: #edibundleGreen;
+                          font-size: 1.3rem;
+                          margin-top: -3rem;
 
                           }
                     }

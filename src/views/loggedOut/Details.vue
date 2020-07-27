@@ -19,6 +19,7 @@
         <h1>Where</h1>
         <h2></h2>
         <h3>This location is a little out of the way located 10 Minutes from Birdwood.</h3>
+        <br>
         <h3>Use the below button for directions on your phone.</h3>
         <ben-button class="ben-button" v-bind:buttonContent="buttonContent">
           <icon-base slot="button-icon" height="0.8rem" width="0.8rem">
@@ -77,6 +78,7 @@ export default {
       font-size: 0;
 
       .hero_inner {width: 100%;
+                    padding: 1rem;
                     border: transparent;
                     height: 100%;
                     display: inline-block;

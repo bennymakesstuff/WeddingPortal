@@ -2,7 +2,7 @@
   <div id="app">
     <MainMenu/>
     <router-view />
-    
+
   </div>
 </template>
 
@@ -27,7 +27,9 @@ export default {
 @import './ui/styles/globals.scss';
 
 body {padding: 0;
-      margin: 0;}
+      margin: 0;
+      background: #e6e3d6 url('./assets/paper3.jpg') repeat;
+      background-size: 30% 5%;}
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -42,6 +44,9 @@ body {padding: 0;
   margin: 0;
   border: 0;
   padding-top: $mainMenuHeight;
+  background: #e6e3d6 url('./assets/paper3.jpg') repeat;
+  background-size: 30% 5%;
+  //background-size: cover;
 }
 
 h1 {margin: 0;}

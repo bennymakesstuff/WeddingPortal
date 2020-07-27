@@ -47,21 +47,26 @@ export default {
 @import '../../ui/styles/globals.scss';
 
 .login_area {height: calc(100vh - (#{$mainMenuHeight} * 2));
-            width: 30rem;
-            background-color: #ffffff;
+            width: 100%;
+            background-color: transparent;
             margin-left: auto;
             margin-right: auto;
             line-height: calc(100vh - #{$mainMenuHeight});
 
       .login_box {line-height: 1rem;
                   display: inline-block;
-                  padding: 1.5rem 0.5rem;
+                  padding: 2rem;
                   vertical-align: middle;
                   height: 25rem;
-                  width: 20rem;
+                  width: calc(100% - 4rem);
                   //border: 1px solid #aeaeae;
                   border-radius: 0.7rem;
                   background-color: transparent;
+
+                  @include respond-to('medium'){
+                    width: 20rem;
+                    padding: 1.5rem 0.5rem;
+                  }
 
       .input_area {margin-top: 2rem;
 
