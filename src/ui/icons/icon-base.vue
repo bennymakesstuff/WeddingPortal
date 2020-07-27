@@ -33,7 +33,7 @@ export default {
     },
     iconColor: {
       type: String,
-      default: 'currentColor'
+      default: '#ffffff'
     }
   },
   data: function(){
@@ -43,4 +43,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+svg {padding: 0;
+    position: absolute;
+    top: -0.2rem;
+  left: -0.1rem;}
 </style>

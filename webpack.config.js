@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const application_settings = {
-  title: "HomeSales",
+  title: "Edibundle",
   filename: "index.html",
   template: "./src/index.html"
 };
@@ -19,7 +19,7 @@ module.exports = {
   output: {
     filename: "[name].js",
     path: path.resolve(__dirname, "public"),
-    publicPath: 'http://192.168.1.8:9000/',
+    publicPath: '/',
   },
 
 

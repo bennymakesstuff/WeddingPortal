@@ -1,7 +1,7 @@
 <template>
   <div class="metric-content">
     <div class="large-metric">
-      803
+      $ 1,803.00
     </div>
   </div>
 </template>
@@ -31,7 +31,7 @@ export default {
   .large-metric {font-size: 2.2rem;
                 text-align: right;
                 position: absolute;
-                top: -25px;
+                top: -10px;
                 right: 0px;
                 color: #5a5a5a;
               }

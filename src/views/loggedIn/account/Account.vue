@@ -6,6 +6,10 @@
       <icon-base slot="pane-icon" width="50px" height="50px"><user-icon/></icon-base>
       <personal-details slot="pane-content" />
     </pane>
+    <pane size="full" title="Payment Methods" color="#787878">
+      <icon-base slot="pane-icon" width="50px" height="50px"><shield-icon/></icon-base>
+      <payment-methods slot="pane-content"/>
+    </pane>
     <pane size="full" title="Security" color="#787878">
       <icon-base slot="pane-icon" width="50px" height="50px"><shield-icon/></icon-base>
       <personal-security slot="pane-content"/>
@@ -18,6 +22,7 @@
 import Pane from '../../../ui/pane.vue';
 import PersonalDetails from './Personal_Details.vue';
 import PersonalSecurity from './Personal_Security.vue';
+import PaymentMethods from './Payment_Methods.vue';
 import IconBase from '../../../ui/icons/icon-base.vue';
 import IconShieldLock from '../../../ui/icons/icon-shield-lock.vue';
 import IconPersonFill from '../../../ui/icons/icon-person-fill.vue';
@@ -28,6 +33,7 @@ export default {
     'pane':Pane,
     'personal-details': PersonalDetails,
     'personal-security': PersonalSecurity,
+    'payment-methods':PaymentMethods,
     'icon-base': IconBase,
     'shield-icon': IconShieldLock,
     'user-icon': IconPersonFill

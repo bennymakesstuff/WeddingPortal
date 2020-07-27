@@ -31,22 +31,23 @@
       </quicklink>
     </div>
 
-    <widget size="narrow" color="#286fb8" title="BDU Page Visits">
+    <widget size="narrow" color="#286fb8" title="Total Savings">
       <icon-base slot="widget-icon" width="40px" height="40px"><today-icon/></icon-base>
       <bdu-visits-today slot="widget-content"/>
     </widget>
 
-    <widget size="narrow" color="" title="Directory Visits">
+    <widget size="narrow" color="" title="Last Order Savings">
       <directory-visits-today slot="widget-content"/>
     </widget>
 
-    <widget size="narrow" color="" title="Bookings Today">
+    <widget size="narrow" color="" title="Annual Savings">
       <bookings-today slot="widget-content"/>
     </widget>
 
-    <widget size="standard" color="" title="New Bookings Today"/>
-    <widget size="standard" color="#cf932c" title="Today's Due Checkins"/>
-    <widget size="narrow" color="#cf4e2c"/>
+    <widget size="standard" color="" title="Order History (Last 4)"/>
+    <widget size="standard" color="#cf932c" title="Re-order Last Box"/>
+    <widget size="narrow" color="#cf4e2c" title="Raise Claim"/>
+    <widget size="standard" color="#cf932c" title="This Weeks Specials"/>
   </div>
 </template>
 

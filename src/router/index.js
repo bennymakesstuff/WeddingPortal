@@ -1,13 +1,14 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
+import Store from "../store/index.js";
 import Home from "../views/loggedOut/Home.vue";
 import Dashboard from "../views/loggedIn/dashboard/Dashboard.vue";
 import Login from "../views/loggedOut/Login.vue";
 import Register from "../views/loggedOut/Register.vue";
 import Error404 from "../views/errors/404.vue";
 
-Vue.use(VueRouter);
 
+Vue.use(VueRouter);
 
 
 const routes = [
@@ -24,6 +25,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "login" */ "../views/loggedOut/Login.vue")
+  },
+  {
+    path: "/about",
+    name: "about",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "login" */ "../views/loggedOut/About.vue")
   },
   {
     path: "/register",
@@ -80,11 +90,11 @@ const routes = [
       }
     },
     {
-      path: 'Scans',
-      name: 'user_scans',
+      path: 'subscriptions',
+      name: 'user_subscription',
       components: {
         default: () =>
-          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/scans/Scans.vue"),
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/subscription/Subscription.vue"),
       }
     },
     {
@@ -96,11 +106,11 @@ const routes = [
       }
     },
     {
-      path: 'bookings',
-      name: 'user_bookings',
+      path: 'history',
+      name: 'user_history',
       components: {
         default: () =>
-          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/bookings/Bookings.vue"),
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/history/OrderHistory.vue"),
       }
     },{
       path: 'ideas',
@@ -110,11 +120,11 @@ const routes = [
           import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/ideas/Ideas.vue"),
       }
     },{
-      path: 'properties',
-      name: 'user_properties',
+      path: 'neworder',
+      name: 'user_neworder',
       components: {
         default: () =>
-          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/properties/Properties.vue"),
+          import(/* webpackChunkName: "dashboard" */ "../views/loggedIn/neworder/NewOrder.vue"),
       }
     },{
       path: 'support',

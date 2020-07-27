@@ -1,6 +1,7 @@
 <template>
   <div class="application">
-    <h1>Support / FAQ</h1>
+    <h1>Support</h1>
+    <h2>Get in touch with us or let us know if a product that was not up to standard.</h2>
   </div>
 </template>
 

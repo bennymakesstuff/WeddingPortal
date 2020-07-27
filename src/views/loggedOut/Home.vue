@@ -1,34 +1,229 @@
 <template>
   <div class="home">
-    <ben-button v-bind:buttonContent="buttonContent"></ben-button>
-    <ben-button v-bind:buttonContent="buttonContent2"></ben-button>
-<h1>External facing Home Page</h1>
+    <div class="hero">
+      <div class="hero_inner">
+        <div class="title_area">
+          <div class="left">
+            <!-- SA LOGO HERE -->
+          </div>
+          <div class="right">
+            <h1>Adelaide's Local</h1>
+            <h1>Produce Box</h1>
+          </div>
+        </div>
+        <div class="signup_area">
+          <h2>Shop Online. Buy Local. Eat Better. Save More. Repeat.</h2>
+          <div class="start-account-area">
+            <div class="field quarter">
+              <input type="text" placeholder=" " id="name">
+              <div class="label">Given Name</div>
+            </div>
+            <div class="field quarter">
+              <input type="text" placeholder=" " id="name">
+              <div class="label">Surname</div>
+            </div>
+            <div class="field half">
+              <input type="text" placeholder=" " id="email">
+              <div class="label">Email Address</div>
+            </div>
+              <button>Create Account</button>
+            <h2>Or</h2>
+            <button class="facebook social">Log in with Facebook</button><button class="google social">Sign in with Google</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import Button from '../../ui/button.vue';
-
 export default {
   name: "Home",
   components: {
-    'ben-button':Button
   },
   data: function(){
-    return {
-      buttonContent: {content: "Login",
-                id: 'defaultButton',
-                size: 'medium',
-                type: '',
-                shadow: 'low',
-                location: 'user_dashboard'},
-      buttonContent2: {content: "Login",
-                id: 'defaultButton',
-                size: 'medium',
-                type: '',
-                shadow: 'low',
-                location: 'admin_dashboard'}
-            }
+    return {}
   },
 };
 </script>
+<style lang="scss" scoped>
+@import '../../ui/styles/colors.scss';
+@import '../../ui/styles/breakpoints.scss';
+@import '../../ui/styles/globals.scss';
+
+.hero {min-height: 20rem;
+      width: 100%;
+      background-color: #ffffff;
+      border-bottom: 1px solid #e0e0e0;
+      background: #96ad8c url('../../assets/bg5.png') repeat;
+      line-height: 1rem;
+      min-height: 20rem;
+      height: auto;
+      position: relative;
+      text-align: center;
+      font-size: 0;
+
+      .hero_inner {width: 100%;
+                    border: transparent;
+                    height: 100%;
+                    display: inline-block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    padding-top: 4rem;
+
+                    @include respond-to('medium'){
+                      width: 50rem;
+                    }
+
+                    .title_area {width: 100%;
+                                height: auto;
+                                font-size: 0;
+                                position: relative;
+
+                        .left {border: 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: calc(30% + 3rem;);
+                                min-height: 12rem;
+                                background: transparent url('../../assets/sa_logo_stroke.png') no-repeat;
+                                background-size: contain;
+                                background-position: center;}
+
+                        .right {border: 0;
+                                display: inline-block;
+                                vertical-align: middle;
+                                width: 70%;
+                                margin-left: -3rem;
+                                text-align: left;
+
+                                h1 {font-size: 5.8rem;
+                                  line-height: 5.8rem;
+                                    font-weight: 400;
+                                    margin: 0;
+                                    padding: 0;
+                                    color: #ffffff;
+                                    font-family: 'Covered By Your Grace', cursive;
+                                    text-shadow: 0px 1px 5px $heroTextShadow;}
+                              }
+                    }
+                    .signup_area {
+                      font-family: 'Quicksand', sans-serif;
+                      border: 0;
+                      min-height: 10rem;
+                      width: calc(100% - 4rem);
+                      padding: 2rem;
+                      display: inline-block;
+                      margin-left: auto;
+                      margin-right: auto;
+                      margin-top: 2rem;
+
+                      .start-account-area {border: 0;
+                      min-height: 5rem;
+                      margin-top: 0.5rem;
+                      width: calc(100%);
+                      padding: 0.5rem 2rem;
+                      display: inline-block;
+                      margin-left: auto;
+                      margin-right: auto;
+
+                      button {padding: 0.5rem 1.5rem;
+                              margin-top: 0.5rem;
+                              font-size: 1.1rem;
+                              color: #ffffff;
+                              //background-color: $bottomMenuBackground;
+                              background-color: $edibundleGreen;
+                              border: 0;
+                              border-radius: 0.3rem;
+                              font-weight: 300;
+                              cursor: pointer;
+                              outline: none;
+                              box-shadow: 0px 1px 1px rgba(63, 102, 57, 0.77);
+                              transition: box-shadow 150ms ease;}
+
+                      button:hover {box-shadow: 1px 1px 3px rgba(45, 78, 40, 1);}
+
+                      .social {display: inline-block;
+                              margin-top: 1rem;
+                              margin-left: 0.3rem;
+                              margin-right: 0.3rem;}
+
+                      .facebook {background-color: #304b94; font-weight: 400; font-size: 0.9rem;}
+                      .google {background-color: #c94131;font-weight: 400; font-size: 0.9rem;}
+
+                      .field {width: calc(100% - 2rem);
+                              margin: 0.5rem 1rem;
+                              height: auto;
+                              position: relative;
+                              min-height: 2.5rem;
+                              background-color: rgb(246, 246, 246);
+                              border-radius: 0.3rem;
+                              box-shadow: 0px 1px 1px rgba(63, 102, 57, 0.77);
+
+                        .label {position: absolute;
+                                top: 0.85rem;
+                                left: 0.5rem;
+                                font-size: 1rem;
+                                font-weight: 100;
+                                transition: top 250ms ease, top 250ms ease, top 250ms ease;
+                                pointer-events: none;}
+
+
+                        input[type='text'],input[type='password'] {position: absolute;
+                              top: 0;
+                              left: 0;
+                              font-size: 1rem;
+                              width: calc(100% - 1rem);
+                              padding: 0rem 0.5rem;
+                              height: 2.8rem;
+                              background-color: transparent;
+                              font-family: 'Quicksand', sans-serif;
+                              font-weight: 500;
+                              border: 0;
+                              outline: 0;
+                            }
+                          input:not(:placeholder-shown) + .label{
+                              top: 0rem;
+                              left: 0.5rem;
+                              font-size: 0.6rem;
+                              font-weight: 100;
+                          }
+                          }
+                          .field:focus-within {border: 1px solid $edibundleGreen;}
+                          .field:focus-within > .label {top: 0rem;
+                                                        left: 0.5rem;
+                                                        font-size: 0.6rem;
+                                                        font-weight: 100;}
+
+
+                          .half {width: calc(50% - 1rem);
+                                margin-left: 0.5rem;
+                                margin-right: 0.5rem;
+                                display: inline-block;
+                                vertical-align: top;}
+
+                          .quarter {width: calc(25% - 1rem);
+                                margin-left: 0.5rem;
+                                margin-right: 0.5rem;
+                                display: inline-block;
+                                vertical-align: top;}
+
+                                h2 {color: #ffffff;
+                                    font-size: 1.3rem;
+                                    margin-top: 1rem;
+                                    }
+                    }
+
+                      h2 {color: #ffffff;
+                          font-size: 1.5rem;
+                          margin-top: 0rem;
+
+                          }
+                    }
+
+
+                  }
+    }
+
+
+
+</style>

@@ -1,13 +1,9 @@
 <template>
   <div class="main-navigation">
 
-    <div class="app-logo">
-      <icon-base slot="pane-icon" width="180px" height="50px" viewBox="0 0 180 50"><icon-bellhop/></icon-base>
-    </div>
-
     <div class="user-card" v-on:click="navigateTo('user_account')">
       <div class="image"></div>
-      <div class="name">{{ user.firstname }} {{ user.surname }}</div>
+      <div class="name">{{ user.firstname }}</div>
     </div>
 
     <div v-for="item in menu_items" class="menu-item" v-on:click="navigateTo(item.link)">
@@ -60,13 +56,10 @@ export default {
       user: {firstname: 'Chelsea', surname: 'Turner'},
       menu_items: [
         {id: 1, position: 1, title: 'Dashboard', link: 'user_dashboard', icon: 'icon-dashboard', active: true},
-        {id: 2, position: 2, title: 'Properties', link: 'user_properties', icon: 'icon-property', active: true},
-        {id: 2, position: 2, title: 'Scans', link: 'user_scans', icon: 'icon-property', active: true},
-        {id: 3, position: 3, title: 'Bookings', link: 'user_bookings', icon: 'icon-bookings', active: true},
-        {id: 4, position: 4, title: 'My Bank', link: 'user_banking', icon: 'icon-bank', active: true},
-        {id: 6, position: 6, title: 'My Team', link: 'user_team', icon: 'icon-team', active: true},
-        {id: 6, position: 6, title: 'Support / FAQ', link: 'user_support', icon: 'icon-support', active: true},
-        {id: 6, position: 6, title: 'Ideas / Feedback', link: 'user_ideas', icon: 'icon-idea', active: true},
+        {id: 2, position: 2, title: 'New Order', link: 'user_neworder', icon: 'icon-property', active: true},
+        {id: 2, position: 2, title: 'Order History', link: 'user_history', icon: 'icon-property', active: true},
+        {id: 2, position: 2, title: 'Subscription', link: 'user_subscription', icon: 'icon-property', active: true},
+        {id: 6, position: 6, title: 'Support', link: 'user_support', icon: 'icon-support', active: true},
       ]
     }
   },
@@ -76,26 +69,31 @@ export default {
           .catch(function(error){
             console.log("Already at this location. Navigation Ignored.")
           });
-    }
+    },
+
   }
 }
 </script>
 
 <style lang="scss" scoped>
+@import '../../../ui/styles/breakpoints.scss';
+@import '../../../ui/styles/colors.scss';
+
 .main-navigation {font-size: 0.8rem;
-                  color: #333333;
-                  position: absolute;
+                  color: $accountMenuText;
+                  position: fixed;
                   width: 100%;
                   padding: 0;
                   margin: 0;
+                  box-shadow: $accountMenuShadow;
+                  z-index: 50;
 
     .menu-item {width: calc(100%);
                 height: 50px;
-                color: #eee;
+                color: $accountMenuText;
                 font-size: 0;
                 cursor: pointer;
-                //border-bottom: 1px solid #1a1818;
-                border-bottom: 1px solid #273038;
+                border-bottom: 1px solid $accountMenuBorder;
 
         .icon {width: 30px;
               height: 30px;
@@ -112,7 +110,7 @@ export default {
                 padding-left: 0;
                 line-height: 52px;
                 text-align: left;
-                color: #eee;
+                color: $accountMenuText;
                 font-weight: 300;
                 display: inline-block;
                 vertical-align: top;
@@ -122,18 +120,16 @@ export default {
 
               }
 
-    .menu-item:hover {background-color: rgba(#eeeeee, 0.05);}
+    .menu-item:hover {background-color: $accountMenuHover;}
 
 .user-card {width: calc(100%);
             height: 80px;
-            color: #eee;
+            color: $accountMenuText;
             font-size: 0;
             line-height: 80px;
             cursor: pointer;
-          //border-bottom: 1px solid #393737;
-            //border-top: 1px solid #393737;
-            border-bottom: 1px solid #273038;
-            border-top: 1px solid #273038;
+            border-bottom: 1px solid $accountMenuBorder;
+            border-top: 1px solid $accountMenuBorder;
             margin-bottom: 10px;
 
     .image {width: 60px;
@@ -153,7 +149,7 @@ export default {
             padding-left: 0;
             line-height: 85px;
             text-align: left;
-            color: #eee;
+            color: $accountMenuText;
             font-weight: 300;
             display: inline-block;
             vertical-align: middle;
