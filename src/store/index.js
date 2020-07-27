@@ -11,19 +11,26 @@ export default new Vuex.Store({
   mutations: {
     login_user (state, userData) {
 
-      if(userData.username=="ben"){
-        var user = {fname:"Benjamin",sname:"Broad",is_admin:false};
+      if(userData.username.toLowerCase()=="ben"){
+        var user = {fname:"Benjamin",sname:"Broad",is_admin:true};
         state.user = user;
         localStorage.setItem('user',JSON.stringify(state.user));
         localStorage.setItem('token','12a5d4aef95efawf5fa65afw651af');
-        router.push({name:'user_dashboard'});
+        router.push({name:'ben'});
       }
-      else if(userData.username=="admin"){
-        var user = {fname:"Admin",sname:"Broad",is_admin:true};
+      else if(userData.username.toLowerCase()=="jack"){
+        var user = {fname:"Jack",sname:"Broad",is_admin:true};
         state.user = user;
         localStorage.setItem('user',JSON.stringify(state.user));
         localStorage.setItem('token','12a5d4aef95efawf5fa65afw651af');
-        router.push({name:'admin_dashboard'});
+        router.push({name:'jack'});
+      }
+      else if(userData.username.toLowerCase()=="trav"){
+        var user = {fname:"Travis",sname:"Broad",is_admin:true};
+        state.user = user;
+        localStorage.setItem('user',JSON.stringify(state.user));
+        localStorage.setItem('token','12a5d4aef95efawf5fa65afw651af');
+        router.push({name:'trav'});
       }
       else{
         localStorage.removeItem('user');

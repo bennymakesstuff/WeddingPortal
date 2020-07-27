@@ -2,17 +2,17 @@
   <div class="login">
     <div class="login_area">
       <div class="login_box">
-        <h2>Edibundle Login</h2>
+        <h2>Wedding Party Login</h2>
         <div class="input_area">
           <div class="field">
             <input type="text" placeholder=" " v-model.trim="userInfo.username">
-            <div class="label">Email Address</div>
+            <div class="label">Your Code</div>
           </div>
-          <div class="field">
+        <!--  <div class="field">
             <input type="text" placeholder=" " v-model.trim="userInfo.password">
             <div class="label">Password</div>
-          </div>
-          <button @click="login">Login</button>
+          </div>-->
+          <button @click="login">Let me in</button>
         </div>
 
       </div>
@@ -59,7 +59,7 @@ export default {
                   vertical-align: middle;
                   height: 25rem;
                   width: 20rem;
-                  border: 1px solid #aeaeae;
+                  //border: 1px solid #aeaeae;
                   border-radius: 0.7rem;
                   background-color: transparent;
 

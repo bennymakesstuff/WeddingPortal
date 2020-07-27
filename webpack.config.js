@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 
 const application_settings = {
-  title: "Edibundle",
+  title: "Wedding Portal",
   filename: "index.html",
   template: "./src/index.html"
 };

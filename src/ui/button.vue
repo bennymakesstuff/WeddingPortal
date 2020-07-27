@@ -1,6 +1,15 @@
 <template>
+<div class="buttonOuter">
+<button v-if="buttonContent.isURL" v-bind:class="['thebutton', buttonContent.size, buttonContent.type, buttonContent.shadow]" v-bind:id="buttonContent.id" v-on:click="externalLink()">
+  <div v-if="showIcon" class="icon">
+    <slot name="button-icon"></slot>
+  </div>
+  <div class="text">
+    {{buttonContent.content}}
+  </div>
+</button>
 
-  <button v-bind:class="['thebutton', buttonContent.size, buttonContent.type, buttonContent.shadow]" v-bind:id="buttonContent.id" v-on:click="navigateTo()">
+  <button v-if="!buttonContent.isURL" v-bind:class="['thebutton', buttonContent.size, buttonContent.type, buttonContent.shadow]" v-bind:id="buttonContent.id" v-on:click="navigateTo()">
     <div v-if="showIcon" class="icon">
       <slot name="button-icon"></slot>
     </div>
@@ -8,7 +17,7 @@
       {{buttonContent.content}}
     </div>
   </button>
-
+</div>
 </template>
 
 <script>
@@ -24,6 +33,7 @@ export default {
                 size: 'medium',
                 type: '',
                 shadow: '',
+                isURL: false,
                 location: null}
     }
   },
@@ -45,6 +55,9 @@ export default {
       if(this.buttonContent.location!=null){
         this.$router.push({name: this.buttonContent.location});
       }
+    },
+    externalLink: function(){
+      window.location = this.buttonContent.location;
     }
   }
 };
@@ -54,9 +67,11 @@ export default {
 @import './styles/colors.scss';
 @import './styles/breakpoints.scss';
 
+.buttonOuter {display: inline-block;}
+
  .thebutton {border-radius: 0.2rem;
             border: 0;
-            background-color: #2e8636;
+            background-color: $edibundleGreen;
             color: #f1f1f1;
             font-size: 0.9rem;
             cursor: pointer;

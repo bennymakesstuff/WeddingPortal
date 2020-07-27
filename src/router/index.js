@@ -4,7 +4,6 @@ import Store from "../store/index.js";
 import Home from "../views/loggedOut/Home.vue";
 import Dashboard from "../views/loggedIn/dashboard/Dashboard.vue";
 import Login from "../views/loggedOut/Login.vue";
-import Register from "../views/loggedOut/Register.vue";
 import Error404 from "../views/errors/404.vue";
 
 
@@ -27,22 +26,52 @@ const routes = [
       import(/* webpackChunkName: "login" */ "../views/loggedOut/Login.vue")
   },
   {
-    path: "/about",
-    name: "about",
+    path: "/details",
+    name: "details",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "login" */ "../views/loggedOut/About.vue")
+      import(/* webpackChunkName: "login" */ "../views/loggedOut/Details.vue")
   },
   {
-    path: "/register",
-    name: "register",
+    path: "/accomodation",
+    name: "accomodation",
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "register" */ "../views/loggedOut/Register.vue")
+      import(/* webpackChunkName: "register" */ "../views/loggedOut/Accomodation.vue")
+  },
+  {
+    path: "/ben",
+    name: "ben",
+    meta: {
+      requiresAuth: true,
+      is_admin: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "register" */ "../views/loggedOut/Ben.vue")
+  },
+  {
+    path: "/jack",
+    name: "jack",
+    meta: {
+      requiresAuth: true,
+      is_admin: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "register" */ "../views/loggedOut/Jack.vue")
+  },
+  {
+    path: "/trav",
+    name: "trav",
+    meta: {
+      requiresAuth: true,
+      is_admin: true
+    },
+    component: () =>
+      import(/* webpackChunkName: "register" */ "../views/loggedOut/Trav.vue")
   },
   {
     path: "/admin",

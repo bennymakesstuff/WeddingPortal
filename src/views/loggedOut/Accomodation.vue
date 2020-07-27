@@ -1,33 +1,6 @@
 <template>
   <div class="login">
-    <div class="login_area">
-      <div class="login_box">
-        <h2>Sign Up</h2>
-        <div class="input_area">
-          <div class="field">
-            <input type="text" placeholder=" " v-model.trim="userInfo.givenname">
-            <div class="label">Given Name</div>
-          </div>
-          <div class="field">
-            <input type="text" placeholder=" " v-model.trim="userInfo.surname">
-            <div class="label">Surname</div>
-          </div>
-          <div class="field">
-            <input type="text" placeholder=" " v-model.trim="userInfo.mobile">
-            <div class="label">Mobile</div>
-          </div>
-          <div class="field">
-            <input type="text" placeholder=" " v-model.trim="userInfo.email">
-            <div class="label">Email</div>
-          </div>
-          <div class="field">
-            <input type="text" placeholder=" " v-model.trim="userInfo.password">
-            <div class="label">Password</div>
-          </div>
-        </div>
-        <button @click="login">Sign Up</button>
-      </div>
-    </div>
+    <h1>Accomodation</h1>
   </div>
 </template>
 
@@ -61,7 +34,7 @@ export default {
 
 .login_area {height: calc(100vh - (#{$mainMenuHeight} * 2));
             width: 30rem;
-            background-color: #ffffff;
+            background-color: $edibundleGreen;
             margin-left: auto;
             margin-right: auto;
             line-height: calc(100vh - #{$mainMenuHeight});

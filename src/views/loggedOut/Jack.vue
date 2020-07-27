@@ -7,12 +7,11 @@
             <!-- SA LOGO HERE -->
           </div>
           <div class="right">
-            <h1>Ben & Chelsea</h1>
-            <h1>Do a Wedding</h1>
+            <h1>Jack's Page</h1>
           </div>
         </div>
         <div class="signup_area">
-          <h2>Come and help us celebrate!</h2>
+          
         </div>
       </div>
     </div>

@@ -1,12 +1,11 @@
 <template>
   <div class="menu">
-    <div class="logo_area">Edibundle</div>
+    <div class="logo_area">November 2021</div>
     <div class="button_area">
       <div class="large_menu">
         <router-link v-if="!userLoggedIn" :to="{ name: 'home'}" class="menu_item">Home</router-link>
-        <router-link v-if="!userLoggedIn" :to="{ name: 'about'}" class="menu_item">About</router-link>
-        <router-link :to="{ name: 'register'}" v-if="!userLoggedIn" class="menu_item">Sign Up</router-link>
-        <router-link v-if="userLoggedIn && !userIsAdmin" :to="{ name: 'about'}" class="menu_item">Current Order</router-link>
+        <router-link v-if="!userLoggedIn" :to="{ name: 'details'}" class="menu_item">Details</router-link>
+        <router-link :to="{ name: 'accomodation'}" v-if="!userLoggedIn" class="menu_item">Accomodation</router-link>
         <div v-if="userLoggedIn" @click="logout" class="menu_item">Logout</div>
       </div>
       <button class="menu_trigger">
@@ -40,7 +39,7 @@ export default {
   },
   data: function(){
     return {
-      buttonContent: {content: "User Login",
+      buttonContent: {content: "Wedding Party Login",
                 id: 'defaultButton',
                 size: 'medium',
                 type: '',
@@ -81,12 +80,12 @@ export default {
 
 .menu {height: $mainMenuHeight;
       width: 100%;
-      background-color: #ffffff;
+      background-color: $menuBackgroundColor;
       color: #dddddd;
       position: fixed;
       z-index: 100;
       top: 0;
-      box-shadow: 0px 0px 5px #d0d0d0;
+      //box-shadow: 0px 0px 5px #d0d0d0;
 
       .button_area {width: auto;
                   position: absolute;
@@ -190,7 +189,7 @@ export default {
                   left: 1rem;
                   height: 3.5rem;
                   line-height: 3.5rem;
-                  font-size: 1.5rem;
+                  font-size: 1.2rem;
                   color: $edibundleGreen;
 
           @include respond-to('small'){
