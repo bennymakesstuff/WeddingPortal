@@ -1,22 +1,16 @@
-# EdiBundle
-### Edibundle is a Market to Home food supply business.
-### It sources food ordered in premade or custom made packs from local market suppliers
-### then packages and delivers it to the customers.
+# Wedding Portal
+### This site is for our Wedding Party and Guests to view our wedding details.
 
 ## Core Features
-- Customers can order online
-- Customers can pay online
-- Customers can save regular orders for future reorder
-- Customers can choose from premade boxes
-- Customers can submit photos for issues
-- App creates stickers for customer boxes
-- App creates picking slips for orders
-- App creates travel route for customers and sends customers a message with delivery window
-- App send customers message with delivery and order confirmations as well as order window closing times
+- Act as invite
+- See wedding details
+- See accomodation details
+- Wedding party can log in
+- See photos after
+- Upload Photos / Video
+- Wedding party have games/puzzles to solve
+- Special Wedding Part details
 
-## Future Features
-- Other suppliers
-- Reporting on suppliers
 
 
 ## Project setup
